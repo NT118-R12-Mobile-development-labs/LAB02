@@ -1,0 +1,55 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgDish"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/vOverlay"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="#99000000"
+        app:layout_constraintBottom_toBottomOf="@id/imgDish"
+        app:layout_constraintStart_toStartOf="@id/imgDish"
+        app:layout_constraintEnd_toEndOf="@id/imgDish" />
+
+    <ImageView
+        android:id="@+id/imgStar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:src="@android:drawable/btn_star_big_on"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/vOverlay"
+        app:layout_constraintBottom_toBottomOf="@id/vOverlay"
+        app:layout_constraintEnd_toEndOf="@id/vOverlay" />
+
+    <TextView
+        android:id="@+id/tvDish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/vOverlay"
+        app:layout_constraintBottom_toBottomOf="@id/vOverlay"
+        app:layout_constraintStart_toStartOf="@id/vOverlay"
+        app:layout_constraintEnd_toStartOf="@id/imgStar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
